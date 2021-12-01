@@ -1,7 +1,7 @@
 # Testing-API-calls
  Testing API calls by using mock
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App]
 
