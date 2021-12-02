@@ -1,8 +1,7 @@
-function Title({ filmTitle}) {
-    console.log("in title", filmTitle);
+function Title({ title }) {
     return (
         <div >
-            <h3 className="App-header">  Title of the movies is : {filmTitle} </h3>
+            <h3 className="App-header">  Title of the movies is : "{title}" </h3>
         </div>
     )
 }

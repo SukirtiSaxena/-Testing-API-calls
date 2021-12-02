@@ -14,20 +14,12 @@ function App() {
   const getFilms = async () => {
     const apiResponse = await axios.get("https://ghibliapi.herokuapp.com/films");
     const apiData = apiResponse.data;
-    // console.log("apiData",apiData);
-    console.log("title", apiData[0].title);
     setTitle(apiData[0].title);
   };
 
   return (
     <div className="App">
-      <div >
-        <h3 className="App-header">
-          Title of the movies is :{title}
-          {/*         {console.log("Retrun title", title)}
-           <Title title={title} /> */}
-        </h3>
-      </div>
+           <Title title={title} /> 
     </div>
   );
 }
