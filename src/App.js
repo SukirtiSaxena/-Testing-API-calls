@@ -8,15 +8,12 @@ function App() {
   const [title, setTitle] = useState('');
   const [errMsg, setErrorMsg] = useState('');
 
-  useEffect(() => {
-    getFilms()
-  }, []);
-
   const getFilms = async () => {
     try {
       const apiResponse = await axios.get("https://ghibliapi.herokuapp.com/films");
       const apiData = apiResponse.data;
       setTitle(apiData[0].title);
+      setErrorMsg(null);
     }
     catch (error) {
       if (error.response.status === 500)
@@ -27,6 +24,10 @@ function App() {
         setErrorMsg("Got some Error. check back your code");
     }
   };
+
+  useEffect(() => {
+    getFilms()
+  }, []);
 
   return (
     <div className="App">
